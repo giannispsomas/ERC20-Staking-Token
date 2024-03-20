@@ -1,0 +1,25 @@
+    Contract Setup
+    Define the contract name, symbol, decimals, and total supply.
+    Initialize mappings for balances, allowances, staking balances, staking status, and stake times.
+    Define events for transfer, approval, staking, unstaking, burning, and minting.
+    Constructor
+    Accept an initial supply as a parameter.
+    Assign the initial supply to the contract deployer's balance and set the total supply.
+    Token Management Functions
+    balanceOf: Return the balance of a given address.
+    transfer: Move tokens from the sender to a recipient.
+    transferFrom: Move tokens from one address to another, given approval.
+    approve: Approve another address to spend tokens on behalf of the sender.
+    allowance: Return the remaining number of tokens that a spender is allowed to spend on behalf of the owner.
+    Staking Functions
+    stakeTokens: Allow a user to stake a specified amount of tokens.
+    unstakeTokens: Allow a user to unstake their tokens, applying a burn or mint mechanism based on the staking duration.
+    Burn and Mint Functions
+    burn: Destroy a specified amount of tokens from a user's balance.
+    mint: Create a specified amount of new tokens and add them to a user's balance.
+    Staking Logic
+    When a user stakes tokens, update their staking balance, set their staking status to true, and record the stake time.
+    When a user unstakes tokens, check the time elapsed since staking.
+    If less than or equal to 50 days, burn 15% of the staked tokens.
+    If more than 50 days, mint 15% of the staked tokens.
+    Update the user's balance with the remaining staked tokens and reset their staking status.

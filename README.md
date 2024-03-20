@@ -1,66 +1,10 @@
-## Foundry
+## Staking ERC-20 Contract
 
-**Foundry is a blazing fast, portable and modular toolkit for Ethereum application development written in Rust.**
+**This project is an ERC-20 token contract implementation, with added burning, minting, as well as staking and unstaking functionalities**
 
-Foundry consists of:
+Functionalities include:
 
--   **Forge**: Ethereum testing framework (like Truffle, Hardhat and DappTools).
--   **Cast**: Swiss army knife for interacting with EVM smart contracts, sending transactions and getting chain data.
--   **Anvil**: Local Ethereum node, akin to Ganache, Hardhat Network.
--   **Chisel**: Fast, utilitarian, and verbose solidity REPL.
-
-## Documentation
-
-https://book.getfoundry.sh/
-
-## Usage
-
-### Build
-
-```shell
-$ forge build
-```
-
-### Test
-
-```shell
-$ forge test
-```
-
-### Format
-
-```shell
-$ forge fmt
-```
-
-### Gas Snapshots
-
-```shell
-$ forge snapshot
-```
-
-### Anvil
-
-```shell
-$ anvil
-```
-
-### Deploy
-
-```shell
-$ forge script script/Counter.s.sol:CounterScript --rpc-url <your_rpc_url> --private-key <your_private_key>
-```
-
-### Cast
-
-```shell
-$ cast <subcommand>
-```
-
-### Help
-
-```shell
-$ forge --help
-$ anvil --help
-$ cast --help
-```
+-   Staking and unstaking mechanisms
+-   Burning mechanism that acts like penalty if a user decides to stake their tokens, but they withdraw them within 30 days, instead of more.
+-   Minting mechanism that gifts the user with a 20 percent bonus token amount if they decide to stake their tokens for more than 30 days.
+-   Used the Foundry framework for writing the deploy script, as well as the testing script.
